@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family:@altFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  background-color: @white;
+}
+
+// BODY TEXT
+// ---------
+
+p {
+  margin: 0 0 @baseLineHeight / 2;
+  small {
+    font-size: @baseFontSize - 2;
+  }
+}
+
+// HEADINGS
+// --------
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+  small {
+    font-weight: normal;
+  }
+}
+h1 {
+  font-size: 30px;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: 18px;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: 18px;
+  }
+}
+h3 {
+  font-size: 18px;
+  line-height: @baseLineHeight * 1.5;
+  small {
+    font-size: 14px;
+  }
+}
+h4, h5, h6 {
+  line-height: @baseLineHeight;
+}
+h4 {
+  font-size: 14px;
+  small {
+    font-size: 12px;
+  }
+}
+h5 {
+  font-size: 12px;
+}
+h6 {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+a {
+  color: @white;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0 0 @baseLineHeight / 2 25px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+// Misc
+small {
+  font-size: 100%;
+}
+cite {
+  font-style: normal;
+}
+
+img{
+  border:none;
+}
