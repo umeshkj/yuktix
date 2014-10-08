@@ -82,7 +82,30 @@ a{
 }
 .menubar{
 	background-color: @tabs-bg;
-	height: 48px;
-	-webkit-box-shadow: 0px 0px 2px 0px #F7F7F7;
-	box-shadow: 0px 0px 2px 0px #F7F7F7;
+    border-bottom: 2px solid @grayDark;
+    height: 48px;
+    margin-bottom: 14px;
 }
+
+.menubar-content{
+	padding: 14px 0px;
+	a{
+		font-family: 'hero_lightlight';
+		font-size: 18px;
+		line-height: 20px;
+		color: @greenfont;
+		padding: 0px 16px;
+		border-right: 2px solid @black;
+		&:first-child{
+			padding-left: 0px;
+		}
+		&:last-child{
+			border: none;
+		}
+	}
+	a.active{
+		color: @grayfont;
+	}
+}
+
+
