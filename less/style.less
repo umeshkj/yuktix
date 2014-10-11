@@ -3,8 +3,15 @@
 @import "header.less";
 @import "footer.less";
 @import "fonts.less";
+@import "buttons.less";
 body{
 	font-family: 'heroregular';
+}
+.main{
+	min-height: 465px;
+}
+.main-content{
+	margin-top: 20px;
 }
 .wrapper{
 	width: 90%;
@@ -84,9 +91,7 @@ a{
 	background-color: @tabs-bg;
     border-bottom: 2px solid @grayDark;
     height: 48px;
-    margin-bottom: 14px;
 }
-
 .menubar-content{
 	padding: 14px 0px;
 	a{
@@ -108,4 +113,78 @@ a{
 	}
 }
 
+.submenu{
+	background-color: @tabs-bg;
+    border-bottom: 2px solid @grayDark;
+    height: 70px;
+}
+.submenu-content{
+	padding: 25px 0px 10px;
+	a{
+		font-family: 'hero_lightlight';
+		color: @grayfont;
+		font-size: 20px;
+		line-height: 20px;
+		padding: 0px 16px;
+		display: inline-block;
+		p.submenu-selected{
+			color: @greenfont;
+			border-bottom: 4px solid @greenfont;
+			margin: 0px;
+			padding: 15px 0px 6px;
+		}
+	}
+	a.active{
+		border-top: 2px solid @grayDark;
+		border-left: 2px solid @grayDark;
+		border-right: 2px solid @grayDark;
+		background-color: @white;
+	}
+}
+.create-user{
+	margin-left: 15px;
+	margin: 40px 0px;
+	width: 50%;
+}
+#createUser{
+	.field{
+		margin: 20px 0px;
+		font-size: 16px;
+		p{
+			margin-bottom: 5px;
+		}
+		input{
+			width: 70%;
+			border: 2px solid @grayDark;
+			padding: 10px 5px;
+			border-radius: 4px;
+			font-size: 16px;
+			background-color: @input-bg;
+		}
+	}
+}
+.list-users{
+	display: none;
+}
 
+/*page progress indication css starts */
+
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 2px;
+
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+/*page progress indication css ends */
