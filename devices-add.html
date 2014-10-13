@@ -28,37 +28,42 @@
 		<div class="wrapper">
 			<div class="menubar-content">
 				<a href="index.html">Dashboard</a>|
-				<a class="active" href="alert.html">Users (Yuktix Pvt Ltd <span>Change</span>) </a>
-			</div>
-		</div>		
-	</div>
-	<div class="submenu">
-		<div class="wrapper">
-			<div class="submenu-content">
-				<a href="#"><p class="">List User</p></a>
-				<a class="active" href="#"><p class="submenu-selected">Create User</p></a>
+				<a class="" href="#">Devices</a>|
+				<a class="" href="#">Template</a>|
+				<a class="" href="#">Test003</a>
 			</div>
 		</div>		
 	</div>
 	<div class="wrapper">
+		<div class="msg-bar">
+			<div class="success">
+				<img src="imgs/sucess.png">
+				<span>Device added successfully.</span>
+			</div>
+			<div class="error hide">
+				<img src="imgs/sucess.png"> 
+				<span>Device added successfully.</span>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
 		<div class="main-content">
-			<div class="create-user">
-				<form id="createUser">
+			<div class="template-form">
+				<ul class="template-header">
+					<li class="selected">Template</li>
+					<li>Test33333</li>
+					<li>Test44444</li>
+				</ul>
+				<form>
+					<h2>Load serial numbers</h2>
+					<p class="subheader">to create devices from this template, please provide serial numbers in the box below, one per line. You can load 10 serial numbers at a time.</p>
 					<div class="field">
-						<p>Login</p>
-						<input type="text" placeholder="Enter Your Login ID">
-					</div>
-					<div class="field">
-						<p>Email</p>
-						<input type="email" placeholder="eg-test@yuktix.com">
-					</div>
-					<div class="field">
-						<p>Password</p>
-						<input type="text" placeholder="Enter your passward">
-					</div>
-					<div class="field">
-						<p>Confirm your passward</p>
-						<input type="text" placeholder="Confirm your passward">
+						<div class="entries">
+							<p>SN0001</p>
+							<p>SN0002</p>
+							<p>SN0003</p>
+							<p>SN0004</p>
+						</div>
 					</div>
 					<div class="field">
 						<button class="btn selected">SAVE</button>
@@ -66,6 +71,14 @@
 					</div>
 				</form>
 			</div>
+			<ul class="main-menu">
+				<li><div class="img edit"></div><p>Edit template</p></li>
+				<li class="selected"><div class="img load"></div><p>Load serial numbers</p></li>
+				<li><div class="img other"></div><p>Lorem dummy link</p></li>
+				<li><div class="img other"></div><p>Lorem dummy link</p></li>
+				<li><div class="img other"></div><p>Lorem dummy link</p></li>
+				<li><div class="img other"></div><p>Lorem dummy link</p></li>
+			</ul>
 		</div>
 	</div>
 </div>

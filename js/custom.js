@@ -5,3 +5,7 @@ $(".submenu-content a").click(function() {
 	$(this).find("p").addClass("submenu-selected");
 });
 
+$(".main-menu li,.template-header li").click(function(){
+	$(".main-menu li,.template-header li").removeClass("selected");
+	$(this).addClass("selected");
+});

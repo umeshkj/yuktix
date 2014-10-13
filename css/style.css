@@ -229,8 +229,8 @@ footer {
   font-style: normal;
 }
 .btn {
-  width: 140px;
-  padding: 10px;
+  width: 120px;
+  padding: 6px 10px;
   text-transform: uppercase;
   border-radius: 4px;
   margin-right: 10px;
@@ -256,6 +256,12 @@ body {
 .wrapper {
   width: 90%;
   margin: 0 auto;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
 a {
   color: #000000;
@@ -327,6 +333,30 @@ a {
 .devices-groups:hover {
   background-image: url("../imgs/device-groups-selected.png");
 }
+.msg-bar {
+  margin: 10px 0px;
+}
+.success {
+  width: 100%;
+  height: 30px;
+  background-color: #cae4bb;
+  color: #000000;
+  text-align: center;
+}
+.error {
+  width: 100%;
+  height: 30px;
+  background-color: #ba0f14;
+  color: #000000;
+  text-align: center;
+}
+.success img,
+.success span,
+.error img,
+.error span {
+  vertical-align: middle;
+  margin: 5px;
+}
 .menubar {
   background-color: #f7f7f7;
   border-bottom: 2px solid #e9e9e9;
@@ -341,7 +371,6 @@ a {
   line-height: 20px;
   color: #63a43f;
   padding: 0px 16px;
-  border-right: 2px solid #000000;
 }
 .menubar-content a:first-child {
   padding-left: 0px;
@@ -385,15 +414,61 @@ a {
   margin: 40px 0px;
   width: 50%;
 }
-#createUser .field {
+form h2 {
+  width: 50%;
+  font-size: 20px;
+  font-family: 'heroregular';
+}
+form .subheader {
+  color: #666666;
+  font-size: 14px;
+  width: 50%;
+  font-family: 'heroregular';
+}
+.field {
   margin: 20px 0px;
   font-size: 16px;
 }
-#createUser .field p {
+.field p {
   margin-bottom: 5px;
 }
-#createUser .field input {
+.field p span {
+  color: #a3a3a3;
+}
+.field input {
   width: 70%;
+  border: 2px solid #e9e9e9;
+  padding: 10px 5px;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f8f8f8;
+}
+.field .entries {
+  min-width: 200px;
+  width: 50%;
+  border: 2px solid #e9e9e9;
+  padding: 10px 5px;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  min-height: 150px;
+}
+.field .sub-field {
+  width: 32%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.field .sub-field:first-child {
+  margin-right: 5%;
+}
+.field .sub-field p {
+  margin-bottom: 5px;
+}
+.field .sub-field p span {
+  color: #a3a3a3;
+}
+.field .sub-field input {
+  width: 100%;
   border: 2px solid #e9e9e9;
   padding: 10px 5px;
   border-radius: 4px;
@@ -402,6 +477,95 @@ a {
 }
 .list-users {
   display: none;
+}
+.template-form {
+  width: 70%;
+  display: inline-block;
+  vertical-align: top;
+}
+.template-header {
+  margin: 0px 0px 24px;
+  border-bottom: 1px solid #65b037;
+  height: 26px;
+}
+.template-header li {
+  padding: 0px 2px 7px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  cursor: pointer;
+}
+.template-header li.selected {
+  border-bottom: 4px solid #65b037;
+}
+.main-menu {
+  width: 26%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1%;
+  min-width: 200px;
+  border: 2px solid #e9e9e9;
+  padding: 10px 5px;
+  margin-top: 24px;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  min-height: 300px;
+}
+.main-menu li {
+  border-bottom: 2px solid #e9e9e9;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 5px 0;
+  width: 80%;
+  cursor: pointer;
+}
+.main-menu li:first-child {
+  margin-top: 20px;
+}
+.main-menu li:last-child {
+  margin-bottom: 20px;
+  border-bottom: 0px;
+}
+.main-menu li .img {
+  margin-right: 5px;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main-menu li .edit {
+  background-image: url("../imgs/pencil.png");
+}
+.main-menu li .load {
+  background-image: url("../imgs/load.png");
+}
+.main-menu li .other {
+  background-image: url("../imgs/other.png");
+}
+.main-menu li p {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px;
+}
+.main-menu .selected {
+  color: #569c2a;
+}
+.main-menu .selected .img {
+  background-color: #569c2a;
+}
+.main-menu .selected .edit {
+  background-image: url("../imgs/pencil-selected.png");
+}
+.main-menu .selected .load {
+  background-image: url("../imgs/load-selected.png");
+}
+.main-menu .selected .other {
+  background-image: url("../imgs/other-selected.png");
+}
+.device-edit {
+  width: 100%;
 }
 /*page progress indication css starts */
 .pace .pace-progress {
