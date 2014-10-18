@@ -193,7 +193,7 @@ footer {
   float: right;
   margin-top: 25px;
   overflow: hidden;
-  height: 30px;
+  height: 32px;
 }
 .social {
   background-repeat: no-repeat;
@@ -256,6 +256,7 @@ body {
 .wrapper {
   width: 90%;
   margin: 0 auto;
+  overflow: hidden;
 }
 .hide {
   display: none;
@@ -362,6 +363,9 @@ a {
   border-bottom: 2px solid #e9e9e9;
   height: 48px;
 }
+.data-station-menubar {
+  border-bottom: 0px;
+}
 .menubar-content {
   padding: 14px 0px;
 }
@@ -412,7 +416,10 @@ a {
 .create-user {
   margin-left: 15px;
   margin: 40px 0px;
-  width: 50%;
+}
+.form-container {
+  margin-left: 15px;
+  margin: 40px 0px;
 }
 form h2 {
   width: 50%;
@@ -478,7 +485,8 @@ form .subheader {
 .list-users {
   display: none;
 }
-.template-form {
+.template-form,
+.body-left-content {
   width: 70%;
   display: inline-block;
   vertical-align: top;
@@ -498,7 +506,8 @@ form .subheader {
 .template-header li.selected {
   border-bottom: 4px solid #65b037;
 }
-.main-menu {
+.main-menu,
+.body-right-content {
   width: 26%;
   display: inline-block;
   vertical-align: middle;
@@ -510,8 +519,10 @@ form .subheader {
   font-size: 16px;
   background-color: #f8f8f8;
   min-height: 300px;
+  float: right;
 }
-.main-menu li {
+.main-menu li,
+.body-right-content li {
   border-bottom: 2px solid #e9e9e9;
   list-style-type: none;
   margin: 0 auto;
@@ -519,14 +530,17 @@ form .subheader {
   width: 80%;
   cursor: pointer;
 }
-.main-menu li:first-child {
+.main-menu li:first-child,
+.body-right-content li:first-child {
   margin-top: 20px;
 }
-.main-menu li:last-child {
+.main-menu li:last-child,
+.body-right-content li:last-child {
   margin-bottom: 20px;
   border-bottom: 0px;
 }
-.main-menu li .img {
+.main-menu li .img,
+.body-right-content li .img {
   margin-right: 5px;
   vertical-align: middle;
   display: inline-block;
@@ -535,37 +549,194 @@ form .subheader {
   background-repeat: no-repeat;
   background-position: center;
 }
-.main-menu li .edit {
+.main-menu li .edit,
+.body-right-content li .edit {
   background-image: url("../imgs/pencil.png");
 }
-.main-menu li .load {
+.main-menu li .load,
+.body-right-content li .load {
   background-image: url("../imgs/load.png");
 }
-.main-menu li .other {
+.main-menu li .other,
+.body-right-content li .other {
   background-image: url("../imgs/other.png");
 }
-.main-menu li p {
+.main-menu li p,
+.body-right-content li p {
   display: inline-block;
   vertical-align: middle;
   margin: 0px;
 }
-.main-menu .selected {
+.main-menu .selected,
+.body-right-content .selected {
   color: #569c2a;
 }
-.main-menu .selected .img {
+.main-menu .selected .img,
+.body-right-content .selected .img {
   background-color: #569c2a;
 }
-.main-menu .selected .edit {
+.main-menu .selected .edit,
+.body-right-content .selected .edit {
   background-image: url("../imgs/pencil-selected.png");
 }
-.main-menu .selected .load {
+.main-menu .selected .load,
+.body-right-content .selected .load {
   background-image: url("../imgs/load-selected.png");
 }
-.main-menu .selected .other {
+.main-menu .selected .other,
+.body-right-content .selected .other {
   background-image: url("../imgs/other-selected.png");
 }
 .device-edit {
   width: 100%;
+}
+.dashboard-tabs a {
+  text-transform: uppercase;
+}
+.dashboard-menu {
+  background-color: #63a43f;
+  color: #ffffff;
+}
+.dashboard-menu .dashboard-menu-content {
+  overflow: hidden;
+}
+.dashboard-menu .dashboard-menu-content h2,
+.dashboard-menu .dashboard-menu-content .search {
+  display: inline-block;
+  vertical-align: middle;
+}
+.dashboard-menu .dashboard-menu-content .search {
+  float: right;
+}
+.dashboard-menu .dashboard-menu-content .search-field {
+  width: 250px;
+  height: 24px;
+  background-color: transparent;
+  margin-top: 7px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 0px 5px;
+  background-image: url("../imgs/search.png");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  color: #ffffff;
+}
+.map {
+  width: 100%;
+  height: 400px;
+  margin: 50px 0px;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+.sites {
+  width: 100%;
+  text-align: center;
+}
+.sites .site-imgs {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32%;
+  margin-right: 1%;
+  border: 1px solid #b0b0b0;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.sites .site-imgs:last-child {
+  margin-right: 0px;
+}
+.sites .site-imgs img {
+  width: 100%;
+}
+.sites .site-imgs h2,
+.sites .site-imgs p {
+  margin-left: 10px;
+}
+.sites .site-imgs h2 {
+  text-transform: uppercase;
+}
+.stations h2 {
+  margin-bottom: 20px;
+}
+.stations h2 span {
+  background-color: #63a43f;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 2px 8px;
+}
+.stations table tbody tr td:first-child {
+  width: 35%;
+}
+.stations table tbody tr td:first-child p span {
+  background-color: #63a43f;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 3px 8px;
+  margin: 0px 10px;
+}
+.stations table tbody tr td:last-child {
+  width: 65%;
+}
+.login {
+  width: 400px;
+  margin: 50px auto 0px;
+  height: 450px;
+  background-color: #1f2420;
+  text-align: center;
+}
+.login form {
+  position: relative;
+  height: 100%;
+}
+.login form .login-title {
+  margin: 0 auto;
+  padding-top: 80px;
+  position: relative;
+  text-align: center;
+  width: 70%;
+  height: 40px;
+}
+.login form .login-title hr {
+  position: absolute;
+  z-index: 0;
+  color: #202521;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.login form .login-title h2 {
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+  background-color: #1f2420;
+  color: #ffffff;
+}
+.field-center {
+  margin: 40px 0 20px;
+}
+.field-center input {
+  text-align: center;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 0px;
+}
+.field-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  font-size: 10px;
+}
+.field-bottom a {
+  margin: 0px 4px;
+  color: #ffffff;
 }
 /*page progress indication css starts */
 .pace .pace-progress {
