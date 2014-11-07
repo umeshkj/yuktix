@@ -5,17 +5,19 @@
 @import "fonts.less";
 @import "buttons.less";
 body{
-	font-family: 'heroregular';
+	font-family: "Source Sans Pro",sans-serif;
 }
 .main{
 	min-height: 465px;
 }
 .main-content{
 	margin-top: 20px;
+	margin-left: 5px;
 }
 .wrapper{
 	width: 90%;
 	margin: 0 auto;
+	overflow: hidden;
 }
 .hide{
 	display: none;
@@ -116,17 +118,24 @@ a{
 }
 .menubar{
 	background-color: @tabs-bg;
-    border-bottom: 2px solid @grayDark;
-    height: 48px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+    // border-bottom: 2px solid @grayDark;
+    // height: 40px;
+}
+.data-station-menubar{
+	border-bottom: 0px;
 }
 .menubar-content{
-	padding: 14px 0px;
+	padding: 8px 0px;
+	border-radius: 4px;
 	a{
-		font-family: 'hero_lightlight';
-		font-size: 18px;
+		font-family: sans-serif;
+		font-size: 14px;
 		line-height: 20px;
 		color: @greenfont;
-		padding: 0px 16px;
+		// padding: 10px 16px;r
+		margin: 0 5px 0 5px;
 		// border-right: 2px solid @black;
 		&:first-child{
 			padding-left: 0px;
@@ -141,7 +150,7 @@ a{
 }
 
 .submenu{
-	background-color: @tabs-bg;
+	// background-color: @tabs-bg;
     border-bottom: 2px solid @grayDark;
     height: 70px;
 }
@@ -171,10 +180,10 @@ a{
 .create-user{
 	margin-left: 15px;
 	margin: 40px 0px;
-	width: 50%;
 }
-#createUser{
-	
+.form-container{
+	margin-left: 15px;
+	margin: 40px 0px;
 }
 form{
 	h2{
@@ -191,7 +200,8 @@ form{
 }
 .field{
 	margin: 20px 0px;
-	font-size: 16px;
+	font-size: 20px;
+	width: 50%;
 	p{
 		margin-bottom: 5px;
 		span{
@@ -199,12 +209,11 @@ form{
 		}
 	}
 	input{
-		width: 70%;
-		border: 2px solid @grayDark;
-		padding: 10px 5px;
+		border: 2px solid @grayborder;
+		padding: 4px 4px;
 		border-radius: 4px;
 		font-size: 16px;
-		background-color: @input-bg;
+		width: 100%;
 	}
 	.entries{
 		min-width: 200px;
@@ -217,11 +226,11 @@ form{
 		min-height: 150px;
 	}
 	.sub-field{
-		width: 32%;
+		width: 48%;
 		display: inline-block;
 		vertical-align: middle;
 		&:first-child{
-			margin-right: 5%;
+			margin-right: 2%;
 		}
 		p{
 			margin-bottom: 5px;
@@ -231,11 +240,10 @@ form{
 		}
 		input{
 			width: 100%;
-			border: 2px solid @grayDark;
-			padding: 10px 5px;
+			border: 2px solid @grayborder;
+			padding: 4px 4px;
 			border-radius: 4px;
 			font-size: 16px;
-			background-color: @input-bg;
 		}
 	}
 }
@@ -245,7 +253,7 @@ form{
 
 // template page styles
 
-.template-form{
+.template-form,.body-left-content{
 	width:70%;
 	display: inline-block;
 	vertical-align: top;
@@ -265,25 +273,29 @@ form{
 		border-bottom: 4px solid @border-green; 
 	}
 }
-.main-menu{
+.main-menu,.body-right-content{
 	width: 26%;
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 1%;
 	min-width: 200px;
-	border: 2px solid @grayDark;
+	// border: 2px solid @grayDark;
 	padding: 10px 5px;
 	margin-top: 24px;
 	font-size: 16px;
-	background-color: @input-bg;
+	// background-color: @input-bg;
 	min-height: 300px;
+	float: right;
 	li{
-		border-bottom: 2px solid @grayDark;
+		// border-bottom: 2px solid @grayDark;
 		list-style-type: none;
 		margin: 0 auto;
-	    padding: 5px 0;
+	    padding: 0px 0;
 	    width: 80%;
 	    cursor: pointer;
+	    &:hover{
+	    	border-left: 2px solid #e1e1e1;
+	    }
 	    &:first-child{
 	    	margin-top: 20px;
 	    }
@@ -334,6 +346,233 @@ form{
 }
 .device-edit{
 	width: 100%;
+}
+
+// dashboard map styles
+
+.dashboard-tabs{
+	a{
+		text-transform: uppercase;
+	}
+}
+.dashboard-menu{
+	background-color: @greenfont;
+	color: @white;
+	.dashboard-menu-content{
+		overflow: hidden;
+		h2,.search,.updated-on{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.search,.updated-on{
+			float: right;
+		}
+		.search-field{
+			width: 250px;
+			height: 24px;
+			background-color: transparent;
+			margin-top: 7px;
+			border:1px solid @white;
+			border-radius: 4px;
+			padding: 0px 5px;
+			background-image: url("../imgs/search.png");
+			background-position: right 10px center;
+			background-repeat: no-repeat;
+			background-size: 14px;
+			color: @white;
+		}
+	}
+}
+.map{
+	width: 100%;
+	height: 400px;
+	margin: 50px 0px;
+	iframe{
+		width: 100%;
+		height: 100%;
+	}
+}
+.sites{
+	width: 100%;
+	text-align: center;
+	.site-imgs{
+		display: inline-block;
+		vertical-align: middle;
+		width: 32%;
+		margin-right: 1%;
+		border: 1px solid @grayLight;
+		text-align: left;
+		margin-bottom: 20px;
+		&:last-child{
+			margin-right: 0px;
+		}
+		img{
+			width: 100%;
+		}
+		h2,p{
+			margin-left: 10px;
+		}
+		h2{
+			text-transform: uppercase;
+		}
+	}
+}
+.stations{
+	h2{
+		margin-bottom: 20px;
+		span{
+			background-color: @greenfont;
+			color: @white;
+			border-radius: 25px;
+    		padding: 2px 8px;
+		}
+	}
+	table{
+		tbody{
+			tr{
+				td{
+					&:first-child{
+						width: 35%;
+						p{
+							span{
+								background-color: @greenfont;
+								color: @white;
+								border-radius: 25px;
+					    		padding: 3px 8px;
+					    		margin: 0px 10px;
+							}
+						}
+					}
+					&:last-child{
+						width: 65%;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// login page styles
+
+.login{
+	width: 400px;
+	margin: 50px auto 0px;
+	height: 450px;
+	background-color: #1f2420;
+	text-align: center;
+	form{
+		position: relative;
+		height: 100%;
+		.login-title{
+			margin: 0 auto;
+		    padding-top: 80px;
+		    position: relative;
+		    text-align: center;
+		    width: 70%;
+		    height: 40px;
+			hr{
+				position: absolute;
+				z-index: 0;
+				color: #202521;
+				width: 100%;
+				text-align: center;
+				margin-top:20px;
+			}
+			h2{
+				position: absolute;
+				z-index: 1;
+				left: 0px;
+				right: 0px;
+				margin: 0 auto;
+				text-align: center;
+				font-size: 30px;
+				background-color: #1f2420;
+				color: @white;
+			}
+		}
+	}
+}
+.field-center{
+	margin: 40px 0 20px;
+	input{
+		text-align: center;
+		border: none;
+		margin-bottom: 5px;
+		border-radius: 0px;
+	}
+}
+.field-bottom{
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	font-size: 10px;
+	a{
+		margin: 0px 4px;
+		color: @white;
+	}
+}
+
+// data- station page styles
+.updated-on p{
+	margin-top: 8px;
+	margin-bottom: 0px;
+}
+.menu-content1,.menu-content2{
+	clear: both;
+}
+.content-left,.content-right{
+	display: inline-block;
+	vertical-align: middle;
+	width: 47%;
+}
+.content-left{
+	.station-details{
+		p{
+			font-size: 14px;
+			font-family: 'hero_lightlight';
+			margin-bottom: 5px;
+			text-transform: capitalize;
+		}
+		.data-details{
+			font-family: 'heroregular';
+			font-size: 20px;
+			text-transform: uppercase;
+		}
+		&:first-child{
+			border-bottom: 1px solid @white;
+		}
+		.details-left{
+			display: inline-block;
+			vertical-align: middle;
+			width: 30%;
+			border-right: 1px solid @white;
+			margin: 8px 0px;
+		}
+		.details-right{
+			display: inline-block;
+			vertical-align: middle;
+			width: 67%;
+			margin: 8px 0px 8px 10px;
+		}
+	}
+}
+.border-bottom{
+	border-bottom: 1px solid @grayDark;
+}
+.content-right{
+	float: right;
+	text-align: right;
+	.data-state-details{
+		display: inline-block;
+		vertical-align: middle;
+		width: 45%;
+		height: 54px;
+		margin: 4px 0px 4px 4px;
+		border:1px solid @white;
+	}
 }
 /*page progress indication css starts */
 

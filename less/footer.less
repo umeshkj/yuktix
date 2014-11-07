@@ -1,12 +1,9 @@
 footer{
 	background-color: @footer-bg;
+	margin-top: 60px;
 }
 .footer-content{
 	overflow: hidden;
-}
-.footer-logo,.footer-menu{
-	display: inline-block;
-	vertical-align: middle;
 }
 .footer-logo{
 	margin: 5px 0px;
@@ -18,42 +15,63 @@ footer{
 }
 .footer-menu{
 	color: @white;
-	margin-top: 10px;
+	padding: 10px 0px;
+	text-align: center;
 }
-.footer-menu a{
-	text-transform: uppercase;
-	color: @footer-text;
-	margin: 0px 15px;
+.footer-menu {
+	text-align: left;
+	.footer-menu-details{
+		text-align: left;
+		display: inline-block;
+		vertical-align: top;
+		color: #cccccc;
+		margin: 0px 15px;
+		width: 24%;
+		margin: 10px 2%;
+		a{
+			text-transform: uppercase;
+			margin: 4px 0px;
+			color: #cccccc;
+			font-size: 14px;
+			display: block;
+		}
+		p{
+			
+		}
+	}
 }
 .social-icons{
-	display: inline-block;
-	vertical-align: middle;
-	float: right;
-	margin-top: 25px;
+	padding: 25px 0px;
 	overflow: hidden;
-    height: 30px;
+	text-align: center;
+	border-bottom: 3px solid @white;
 }
 
 .social{
 	background-repeat: no-repeat;
-    height: 28px;
-    padding: 0 15px 15px;
-    width: 35px;
+    width: 55px;
+    height: 55px;
     margin-left: 13px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .s-twitter{
-	background-image: url('../imgs/twitter.png');
+	background-image: url('../imgs/follow-twitter.png');
 }
 
 .s-facebook{
-	background-image: url('../imgs/facebook.png');
+	background-image: url('../imgs/follow-facebook.png');
 }
 
 .s-youtube{
-	background-image: url('../imgs/youtube.png');
+	background-image: url('../imgs/follow-google.png');
 }
 
 .s-in{
-	background-image: url('../imgs/in.png');
+	background-image: url('../imgs/follow-blog.png');
+}
+.new{
+	height: 80px;
+	background-color: @white;
 }
