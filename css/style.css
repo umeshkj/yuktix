@@ -205,15 +205,17 @@ footer {
 .footer-menu .footer-menu-details a {
   text-transform: uppercase;
   margin: 4px 0px;
-  color: #cccccc;
+  color: #ffffff;
   font-size: 14px;
   display: block;
+}
+.footer-menu .footer-menu-details a:hover {
+  opacity: 0.8;
 }
 .social-icons {
   padding: 25px 0px;
   overflow: hidden;
   text-align: center;
-  border-bottom: 3px solid #ffffff;
 }
 .social {
   background-repeat: no-repeat;
@@ -234,6 +236,11 @@ footer {
 }
 .s-in {
   background-image: url('../imgs/follow-blog.png');
+}
+.footer-devider {
+  height: 3px;
+  background-color: #ffffff;
+  margin: 0px;
 }
 .new {
   height: 80px;
@@ -269,6 +276,10 @@ footer {
   background-color: #ffffff;
   font-size: 18px;
   cursor: pointer;
+  opacity: 0.8;
+}
+.btn:hover {
+  opacity: 1;
 }
 .btn.selected {
   background-color: #63a43f;
@@ -426,7 +437,7 @@ a {
   padding: 25px 0px 10px;
 }
 .submenu-content a {
-  font-family: 'hero_lightlight';
+  font-family: sans-serif;
   color: #666666;
   font-size: 20px;
   line-height: 20px;
@@ -456,13 +467,13 @@ a {
 form h2 {
   width: 50%;
   font-size: 20px;
-  font-family: 'heroregular';
+  font-family: sans-serif;
 }
 form .subheader {
   color: #666666;
   font-size: 14px;
   width: 50%;
-  font-family: 'heroregular';
+  font-family: sans-serif;
 }
 .field {
   margin: 20px 0px;
@@ -489,7 +500,6 @@ form .subheader {
   padding: 10px 5px;
   border-radius: 4px;
   font-size: 16px;
-  background-color: #f8f8f8;
   min-height: 150px;
 }
 .field .sub-field {
@@ -553,14 +563,17 @@ form .subheader {
 .main-menu li,
 .body-right-content li {
   list-style-type: none;
-  margin: 0 auto;
-  padding: 0px 0;
+  margin: 4px auto;
+  padding: 0 0 0 5px;
   width: 80%;
   cursor: pointer;
+  border-radius: 6px 0px 0px 6px;
+  color: #6e6e6e;
+  font-weight: bold;
 }
 .main-menu li:hover,
 .body-right-content li:hover {
-  border-left: 2px solid #e1e1e1;
+  border-left: 3px groove #6e6e6e;
 }
 .main-menu li:first-child,
 .body-right-content li:first-child {
@@ -739,10 +752,10 @@ form .subheader {
   -moz-border-radius: 50%;
   border: 6px solid rgba(221, 218, 215, 0.23);
 }
-form {
+.login-form-content {
   padding: 24% 2.5em;
 }
-form li {
+.login-form-content li {
   border: 1px solid #B4B2B2;
   list-style: none;
   margin-bottom: 25px;
@@ -764,9 +777,8 @@ form li {
 .lock {
   background: url(../imgs/icons.png) no-repeat -17px 11px;
 }
-input[type="text"],
-input[type="password"] {
-  font-family: 'Open Sans', sans-serif;
+.login-input-field {
+  font-family: "Source Sans Pro", sans-serif;
   width: 60%;
   padding: 0.7em 2em 0.7em 1.7em;
   color: #858282;
@@ -776,7 +788,7 @@ input[type="password"] {
   border: none;
   font-weight: 600;
 }
-form li:hover {
+.login-form-content li:hover {
   border: 1px solid #40A9DF;
   box-shadow: 0 0 1em #40A9DF;
   -webkit-box-shadow: 0 0 1em #40A9DF;
@@ -790,46 +802,21 @@ form li:hover {
 input[type="submit"] {
   font-size: 18px;
   font-weight: 600;
-  color: #fff;
   cursor: pointer;
   outline: none;
   padding: 15px 10px;
   margin-top: 3px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   width: 40%;
   border: none;
   border-radius: 4px;
-  background-color: #e27f00;
   opacity: 0.8;
+  background-color: #63a43f;
+  border: 1px solid #63a43f;
+  color: #ffffff;
 }
 input[type="submit"]:hover {
-  background-color: #e27f00;
   opacity: 1;
-}
-/****************/
-.copy-right {
-  position: absolute;
-  bottom: -16%;
-  left: 43.7%;
-}
-.copy-right p {
-  color: #fff;
-  font-size: 1em;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-}
-.copy-right p a {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
-  color: #FF8E03;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-.copy-right p a:hover {
-  color: #fff;
 }
 .updated-on p {
   margin-top: 8px;
