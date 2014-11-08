@@ -98,7 +98,7 @@ table {
   font-family: source sans pro;
 }
 table thead {
-  border: 1px solid #d9d9d9;
+  border: none;
 }
 table thead tr {
   border-bottom: 2px solid #d9d9d9;
@@ -113,7 +113,7 @@ table thead th {
   line-height: 24px;
   padding: 5px 5px;
   color: #1f2320;
-  font-weight: normal;
+  font-weight: bold;
 }
 table tbody td {
   border-bottom: 1px solid #d9d9d9;
@@ -121,28 +121,22 @@ table tbody td {
   font-size: 16px;
   padding: 5px 0 8px 5px;
   color: #333333;
-}
-table tbody td:first-child {
-  border-left: 1px solid #d9d9d9;
-}
-table tbody td:last-child {
-  border-right: 1px solid #d9d9d9;
-}
-table tbody td:last-child div {
-  border: none;
+  font-family: sans-serif;
 }
 table tbody td div {
   padding-left: 10px;
   color: #333333;
+  font-family: sans-serif;
 }
 table tr:hover {
   background-color: #f7f7f7;
 }
 header {
   background-color: #1f2320;
+  height: 110px;
 }
 .header-content {
-  overflow: hidden;
+  text-align: right;
 }
 .logo,
 .menu {
@@ -152,14 +146,34 @@ header {
 .logo {
   float: left;
   padding: 10px 0px 20px;
+  width: 240px;
 }
 .logo img {
-  width: 80%;
+  width: 100%;
 }
 .menu {
-  float: right;
   color: #ffffff;
   margin-top: 38px;
+}
+.menu .menucontent {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0px 5px;
+}
+.menu .menucontent img {
+  width: 18px;
+}
+.menu .userName {
+  width: auto;
+}
+.menu .userName p {
+  background-image: url("../imgs/userIcon.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 30px;
+  background-size: 20%;
+  color: #ffff00;
 }
 .menu a {
   text-transform: uppercase;
@@ -177,21 +191,10 @@ footer {
 .footer-content {
   overflow: hidden;
 }
-.footer-logo {
-  margin: 5px 0px;
-  height: 80px;
-}
-.footer-logo img {
-  width: 80%;
-  margin-top: 15px;
-}
-.footer-menu {
-  color: #ffffff;
-  padding: 10px 0px;
-  text-align: center;
-}
 .footer-menu {
   text-align: left;
+  color: #ffffff;
+  padding: 10px 0px;
 }
 .footer-menu .footer-menu-details {
   text-align: left;
@@ -199,23 +202,28 @@ footer {
   vertical-align: top;
   color: #cccccc;
   margin: 0px 15px;
-  width: 24%;
+  width: 18%;
   margin: 10px 2%;
 }
 .footer-menu .footer-menu-details a {
   text-transform: uppercase;
   margin: 4px 0px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 13px;
   display: block;
 }
 .footer-menu .footer-menu-details a:hover {
   opacity: 0.8;
 }
 .social-icons {
-  padding: 25px 0px;
   overflow: hidden;
   text-align: center;
+  width: 24% !important;
+}
+.social-icons a {
+  display: inline-block !important;
+  vertical-align: middle;
+  margin: 4px 1% !important;
 }
 .social {
   background-repeat: no-repeat;
@@ -293,13 +301,12 @@ body {
   min-height: 465px;
 }
 .main-content {
-  margin-top: 20px;
+  margin-top: 70px;
   margin-left: 5px;
 }
 .wrapper {
   width: 90%;
   margin: 0 auto;
-  overflow: hidden;
 }
 .hide {
   display: none;
@@ -333,6 +340,9 @@ a {
   color: #ffffff;
 }
 .tabs p {
+  color: #6e6e6e;
+  font-size: 18px;
+  font-weight: bold;
   margin-top: 85px;
 }
 .accounts {
@@ -403,7 +413,6 @@ a {
 }
 .menubar {
   background-color: #f7f7f7;
-  margin-top: 20px;
   margin-bottom: 10px;
 }
 .data-station-menubar {
@@ -415,6 +424,7 @@ a {
 }
 .menubar-content a {
   font-family: sans-serif;
+  font-weight: bold;
   font-size: 14px;
   line-height: 20px;
   color: #63a43f;
@@ -488,7 +498,7 @@ form .subheader {
 }
 .field input {
   border: 2px solid #dadada;
-  padding: 4px 4px;
+  padding: 6px 4px;
   border-radius: 4px;
   font-size: 16px;
   width: 100%;
@@ -508,7 +518,7 @@ form .subheader {
   vertical-align: middle;
 }
 .field .sub-field:first-child {
-  margin-right: 2%;
+  margin-right: 3%;
 }
 .field .sub-field p {
   margin-bottom: 5px;
@@ -519,7 +529,7 @@ form .subheader {
 .field .sub-field input {
   width: 100%;
   border: 2px solid #dadada;
-  padding: 4px 4px;
+  padding: 6px 4px;
   border-radius: 4px;
   font-size: 16px;
 }
@@ -713,6 +723,9 @@ form .subheader {
   border-radius: 25px;
   padding: 2px 8px;
 }
+.stations table {
+  font-family: sans-serif;
+}
 .stations table tbody tr td:first-child {
   width: 35%;
 }
@@ -753,7 +766,7 @@ form .subheader {
   border: 6px solid rgba(221, 218, 215, 0.23);
 }
 .login-form-content {
-  padding: 24% 2.5em;
+  padding: 24% 2.5em 1em;
 }
 .login-form-content li {
   border: 1px solid #B4B2B2;
@@ -762,6 +775,22 @@ form .subheader {
   width: 100%;
   background: none;
   border-radius: 4px;
+}
+.new-user {
+  margin-top: 15%;
+  text-align: center;
+}
+.new-user a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  color: #858282;
+  font-size: 12px;
+  opacity: 0.8;
+  padding-bottom: 2px;
+}
+.new-user a:hover {
+  text-decoration: underline;
+  opacity: 1;
 }
 .icon {
   background: url(../imgs/icons.png) no-repeat 0px 0px;
@@ -826,38 +855,45 @@ input[type="submit"]:hover {
 .menu-content2 {
   clear: both;
 }
-.content-left,
-.content-right {
-  display: inline-block;
-  vertical-align: middle;
-  width: 47%;
+ul.content {
+  margin-top: 40px;
 }
-.content-left .station-details p {
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+.content .station-details p {
   font-size: 14px;
-  font-family: 'hero_lightlight';
+  font-family: sans-serif;
   margin-bottom: 5px;
   text-transform: capitalize;
 }
-.content-left .station-details .data-details {
+.content .station-details .data-details {
   font-family: 'heroregular';
   font-size: 20px;
   text-transform: uppercase;
 }
-.content-left .station-details:first-child {
+.content .station-details:first-child {
   border-bottom: 1px solid #ffffff;
 }
-.content-left .station-details .details-left {
+.content .station-details .details-column {
   display: inline-block;
   vertical-align: middle;
-  width: 30%;
+  width: 22%;
   border-right: 1px solid #ffffff;
   margin: 8px 0px;
 }
-.content-left .station-details .details-right {
+.content .station-details .details-right {
   display: inline-block;
   vertical-align: middle;
   width: 67%;
   margin: 8px 0px 8px 10px;
+}
+.content .data-state-details {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #e1e1e1;
+  width: 24%;
 }
 .border-bottom {
   border-bottom: 1px solid #e9e9e9;
@@ -873,6 +909,55 @@ input[type="submit"]:hover {
   height: 54px;
   margin: 4px 0px 4px 4px;
   border: 1px solid #ffffff;
+}
+.dropdown {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: left;
+}
+.dropdown .menu-dropdown {
+  position: absolute;
+  top: 25px;
+  width: 100px;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  background-color: grey;
+  display: none;
+}
+.dropdown .menu-dropdown li {
+  margin: 0px;
+  padding: 5px 4px;
+  border-bottom: 1px solid #ffffff;
+}
+.dropdown .menu-dropdown li:hover {
+  opacity: 0.6;
+}
+.graph-area,
+.help-content,
+.graph-values,
+.graph-content {
+  display: inline-block;
+  vertical-align: top;
+  height: 200px;
+}
+.graph-area {
+  width: 70%;
+  margin-right: 3%;
+  background-color: #e1e1e1;
+}
+.graph-values {
+  width: 20%;
+  background-color: red;
+}
+.graph-content {
+  width: 78%;
+  background-color: blue;
+}
+.help-content {
+  width: 25%;
+  background-color: blue;
 }
 /*page progress indication css starts */
 .pace .pace-progress {
@@ -900,5 +985,34 @@ input[type="submit"]:hover {
 }
 table.channelDisplayContainer {
   margin-bottom: 0px;
+}
+table.channelDisplayContainer input,
+button,
+select,
+textarea {
+  width: 80px;
+  padding: 7px 0px;
+  border: none;
+  box-shadow: none;
+}
+table.channelDisplayContainer button,
+select {
+  color: #ffffff;
+}
+table.channelDisplayContainer tr {
+  background-color: #e1e1e1;
+}
+table#channelDisplayContainer tr {
+  background-color: #ffffff;
+}
+.styled-select-box {
+  width: 80px;
+  overflow: hidden;
+  background-image: url("../imgs/down-arrow.png");
+  background-position: right 5px center;
+  background-repeat: no-repeat;
+}
+.selectbox-hiddenpart {
+  width: 90px !important;
 }
 /*page progress indication css ends */

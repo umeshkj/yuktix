@@ -11,13 +11,12 @@ body{
 	min-height: 465px;
 }
 .main-content{
-	margin-top: 20px;
+	margin-top: 70px;
 	margin-left: 5px;
 }
 .wrapper{
 	width: 90%;
 	margin: 0 auto;
-	overflow: hidden;
 }
 .hide{
 	display: none;
@@ -49,10 +48,14 @@ a{
 			color: @white;
 		}
 	}
+	p{
+		color: @greyMenuFont;
+	    font-size: 18px;
+	    font-weight: bold;
+	    margin-top: 85px;
+	}
 }
-.tabs p{
-	margin-top: 85px;
-}
+
 .accounts{
 	background-image: url("../imgs/accounts.png");
 	&:hover{
@@ -118,7 +121,6 @@ a{
 }
 .menubar{
 	background-color: @tabs-bg;
-	margin-top: 20px;
 	margin-bottom: 10px;
     // border-bottom: 2px solid @grayDark;
     // height: 40px;
@@ -131,6 +133,7 @@ a{
 	border-radius: 4px;
 	a{
 		font-family: sans-serif;
+		font-weight: bold;
 		font-size: 14px;
 		line-height: 20px;
 		color: @greenfont;
@@ -210,7 +213,7 @@ form{
 	}
 	input{
 		border: 2px solid @grayborder;
-		padding: 4px 4px;
+		padding: 6px 4px;
 		border-radius: 4px;
 		font-size: 16px;
 		width: 100%;
@@ -229,7 +232,7 @@ form{
 		display: inline-block;
 		vertical-align: middle;
 		&:first-child{
-			margin-right: 2%;
+			margin-right: 3%;
 		}
 		p{
 			margin-bottom: 5px;
@@ -240,7 +243,7 @@ form{
 		input{
 			width: 100%;
 			border: 2px solid @grayborder;
-			padding: 4px 4px;
+			padding: 6px 4px;
 			border-radius: 4px;
 			font-size: 16px;
 		}
@@ -430,6 +433,7 @@ form{
 		}
 	}
 	table{
+		font-family: sans-serif;
 		tbody{
 			tr{
 				td{
@@ -484,7 +488,7 @@ form{
 	border:6px solid rgba(221, 218, 215, 0.23);
 }
 .login-form-content{
-	padding:24% 2.5em;
+	padding:24% 2.5em 1em;
 }
 .login-form-content li{
 	border:1px solid #B4B2B2;
@@ -493,6 +497,22 @@ form{
 	width:100%;
 	background:none;
 	border-radius: 4px;
+}
+.new-user{
+	margin-top: 15%;
+	text-align: center;
+	a{
+		font-family: "Source Sans Pro",sans-serif;
+		font-weight: bold;
+		color: #858282;
+		font-size: 12px;
+		opacity: 0.8;
+		padding-bottom: 2px;
+		&:hover{
+			text-decoration: underline;
+			opacity: 1;
+		}
+	}
 }
 
 .icon{
@@ -561,16 +581,21 @@ input[type="submit"]:hover{
 .menu-content1,.menu-content2{
 	clear: both;
 }
-.content-left,.content-right{
-	display: inline-block;
-	vertical-align: middle;
-	width: 47%;
+// .content-left,.content-right{
+// 	display: inline-block;
+// 	vertical-align: middle;
+// 	width: 47%;
+// }
+ul.content{
+	margin-top: 40px;
 }
-.content-left{
+.content{
+	width: 80%;
+	margin: 0 auto;
 	.station-details{
 		p{
 			font-size: 14px;
-			font-family: 'hero_lightlight';
+			font-family: sans-serif;
 			margin-bottom: 5px;
 			text-transform: capitalize;
 		}
@@ -582,10 +607,10 @@ input[type="submit"]:hover{
 		&:first-child{
 			border-bottom: 1px solid @white;
 		}
-		.details-left{
+		.details-column{
 			display: inline-block;
 			vertical-align: middle;
-			width: 30%;
+			width: 22%;
 			border-right: 1px solid @white;
 			margin: 8px 0px;
 		}
@@ -595,6 +620,12 @@ input[type="submit"]:hover{
 			width: 67%;
 			margin: 8px 0px 8px 10px;
 		}
+	}
+	.data-state-details{
+		display: inline-block;
+		vertical-align: middle;
+		border:1px solid #e1e1e1;
+		width: 24%;
 	}
 }
 .border-bottom{
@@ -611,6 +642,54 @@ input[type="submit"]:hover{
 		margin: 4px 0px 4px 4px;
 		border:1px solid @white;
 	}
+}
+
+.dropdown{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-align: left;
+	.menu-dropdown{
+		position: absolute;
+		top: 25px;
+		width: 100px;
+		list-style-type: none;
+		margin:0px;
+		padding: 0px;
+		background-color: grey;
+		display: none;
+		li{
+			margin: 0px;
+			padding: 5px 4px;
+			border-bottom: 1px solid @white;
+			&:hover{
+				opacity: 0.6;
+			}
+		}
+	}
+}
+
+.graph-area,.help-content,.graph-values,.graph-content{
+	display: inline-block;
+	vertical-align: top;
+	height: 200px;
+}
+.graph-area{
+	width: 70%;
+	margin-right: 3%;
+	background-color: #e1e1e1;
+}
+.graph-values{
+	width: 20%;
+	background-color: red;
+}
+.graph-content{
+	width: 78%;
+	background-color: blue;
+}
+.help-content{
+	width: 25%;
+	background-color: blue;
 }
 /*page progress indication css starts */
 
@@ -643,5 +722,34 @@ input[type="submit"]:hover{
 
 table.channelDisplayContainer {
     margin-bottom:0px;
+}
+table.channelDisplayContainer td {
+    //width:100%;
+}
+
+table.channelDisplayContainer input, button, select, textarea  {
+    width:80px;
+    padding:7px 0px;
+    border:none;
+    box-shadow:none;
+}
+table.channelDisplayContainer button, select {
+    color:#ffffff;
+}
+table.channelDisplayContainer tr{
+    background-color:#e1e1e1;
+}
+table#channelDisplayContainer tr{
+    background-color:#ffffff;
+}
+.styled-select-box{
+    width:80px;
+    overflow:hidden;
+    background-image:url("../imgs/down-arrow.png");
+    background-position:right 5px center;
+    background-repeat:no-repeat;
+}
+.selectbox-hiddenpart{
+    width:90px !important;
 }
 /*page progress indication css ends */

@@ -1,8 +1,9 @@
 header{
 	background-color: @header-bg;
+	height: 110px;
 }
 .header-content{
-	overflow: hidden;
+	text-align: right;
 }
 .logo,.menu{
 	display: inline-block;
@@ -11,14 +12,34 @@ header{
 .logo{
 	float: left;
 	padding: 10px 0px 20px;
+	width: 240px;
 }
 .logo img{
-	width: 80%;
+	width: 100%;
 }
 .menu{
-	float: right;
 	color: @white;
 	margin-top: 38px;
+	.menucontent{
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		margin: 0px 5px;
+		img{
+			width: 18px;
+		}
+	}
+	.userName{
+		width: auto;
+		p{
+			background-image: url("../imgs/userIcon.png");
+			background-repeat: no-repeat;
+			background-position: left center;
+			padding-left: 30px;
+			background-size: 20%;
+			color: #ffff00;
+		}
+	}
 }
 .menu a{
 	text-transform: uppercase;

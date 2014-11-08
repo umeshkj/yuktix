@@ -9,3 +9,6 @@ $(".main-menu li,.template-header li").click(function(){
 	$(".main-menu li,.template-header li").removeClass("selected");
 	$(this).addClass("selected");
 });
+$(".dropdown").click(function(){
+	$(this).children(".menu-dropdown").toggle();
+});
