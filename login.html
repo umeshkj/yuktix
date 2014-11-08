@@ -1,56 +1,43 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html>
+	
 <head>
-	<title>Yutix</title>
-	<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>The Login-Animated Website Template | Home :: w3layouts</title>
+		<meta charset="utf-8">
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700' rel='stylesheet' type='text/css'>
+		<!--//webfonts-->
 </head>
-<body >
-<header>
-	<div class="wrapper">
-		<div class="header-content header-border">
-			<div class="logo">
-				<a href="index.html">
-					<img src="imgs/logo.png">
-				</a>
-			</div>
-			<div class="menu">
-				<a href="home.html">Home</a>
-				|
-				<a href="about.html">About</a>
-				|
-				<a href="contact.html">Contact</a>
-			</div>
+<body class="login-page">
+	<!-----start-main---->
+	<div class="login-form">
+		<div class="head">
+			<img src="imgs/mem2.jpg" alt=""/>
 		</div>
-	</div>
-</header>
-<div class="main">
-	<div class="wrapper">
-		<div class="main-content">
-			<div class="login">
-				<form class="signin-form">
-					<div class="login-title">
-						<hr>
-						<h2>Signin</h2>
-					</div>
-					<div class="field field-center">
-						<input type="text" placeholder="User Name">
-						<input type="password" placeholder="......">
-					</div>
-					<div class="field">
-						<button class="btn selected">Continue</button>
-					</div>
-					<div class="field field-bottom">
-						<a href="#">New User?</a>
-						<a href="#">Sign Up</a>
-					</div>
-				</form>
+		<form>
+			<li>
+				<input type="text" class="text" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}" ><a href="#" class=" icon user"></a>
+			</li>
+			<li>
+				<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a href="#" class=" icon lock"></a>
+			</li>
+			<div class="loginbtn">
+				<input type="submit" value="SIGN IN" >
 			</div>
-		</div>
+			<div class="">
+				
+			</div>
+		</form>
 	</div>
-</div>
-<script type="text/javascript" src="js/libs/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="js/custom.js"></script>
+	<!--//End-login-form-->		
 </body>
 </html>
