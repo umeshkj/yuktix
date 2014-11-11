@@ -12,3 +12,6 @@ $(".main-menu li,.template-header li").click(function(){
 $(".dropdown").click(function(){
 	$(this).children(".menu-dropdown").toggle();
 });
+if($(".menu-dropdown").css("display","block")){
+	
+}
