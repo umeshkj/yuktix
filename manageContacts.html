@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yutix</title>
+	<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body >
+<header>
+	<div class="wrapper">
+		<div class="header-content">
+			<div class="logo">
+				<a href="index.html">
+					<img src="imgs/logo.png">
+				</a>
+			</div>
+			<div class="menu">
+				<div class="dropdown menucontent">
+					<img src="imgs/settings.png">
+					<ul class="menu-dropdown">
+						<li>12</li>
+						<li>123</li>
+					</ul>
+				</div>
+				<div class="menucontent">
+					<a href=""><img src="imgs/alertsIcon.png"></a>
+				</div>
+				<div class="menucontent userName dropdown">
+					<p>User Name</p>
+					<ul class="menu-dropdown">
+						<li>Profile</li>
+						<li>Logout</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="main">
+	<div class="menubar">
+		<div class="wrapper">
+			<div class="menubar-content">
+				<a href="index.html">Contacts</a>|
+				<a class="active" href="alert.html">My Contacts</a>
+			</div>
+		</div>		
+	</div>
+	<div class="wrapper">
+		<div class="search">
+			<input type="text" placeholder="Search" class="search-field">
+		</div>	
+	</div>
+	<div class="wrapper">
+		<div class="main-content contactUs">
+			<div class="manageContacts">
+				<div class="contactLeftContent">
+					<h2>Contacts</h2>
+					<a href="#" class="btn selected newContactBtn">New Contact</a>
+					<ul class="contactsFolder">
+						<li class="selected contactsGrp">My Contacts
+							<ul class="myContacts contactSubfolder">
+								<li class="contacts">umesh</li>
+								<li class="contacts">vaidya</li>
+							</ul>
+						</li>
+						<li class="contactsGrp">Yuktics
+							<ul class="yuktiks contactSubfolder">
+								<li class="contacts">umesh</li>
+								<li class="contacts">vaidya</li>
+							</ul>
+						</li>
+						<li class="contactsGrp">Friends
+							<ul class="friends contactSubfolder">
+								<li class="contacts">umesh</li>
+								<li class="contacts">vaidya</li>
+							</ul>
+						</li>
+						<li class="contactsGrp">Family
+							<ul class="family contactSubfolder">
+								<li class="contacts">umesh</li>
+								<li class="contacts">vaidya</li>
+							</ul>
+						</li>
+					</ul>
+					<a href="#" class="btn addGroup">New Group</a>
+					<div class="groupInput">
+						<input class="newGrpName" type="text" placeholder="Add Group Name">
+						<div class="groupBtns">
+							<a href="#" class="btn cancel cancelGrp">Cancel</a>			
+							<a href="#" class="btn selected createGroup">ok</a>
+						</div>
+					</div>
+				</div>
+				<div class="contactRightContent">
+					<h2>Contacts Details</h2>
+					<table id="contacts">
+						<thead>
+							<tr>
+								<th>Select</th>
+								<th>Name</th>
+								<th>Email</th>
+								<th>Contact Number</th>
+								<th>Address</th>
+								<th>Group</th>
+								<th>Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>Umesh</td>
+								<td>kj.umesh30@gmail.com</td>
+								<td>9343254619</td>
+								<td>Hebbal,Bangalore</td>
+								<td>My Contacts</td>
+								<td><img class="deletContact" src="imgs/delet.png"><img class="editContact" src="imgs/edit.png"></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox"></td>
+								<td>Vaidya</td>
+								<td>vaidyanathan_99@yahoo.com </td>
+								<td>9880566671</td>
+								<td>Bannergatta Road,Bangalore</td>
+								<td>My Contacts</td>
+								<td><img class="deletContact" src="imgs/delet.png"><img class="editContact" src="imgs/edit.png"></td>
+							</tr>
+						<tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="black_overlay"></div>
+<div class="popup createContact">
+	<form id="createUser">
+		<div class="field">
+			<p>Name</p>
+			<input class="contact_name" type="text" placeholder="Name">
+		</div>
+		<div class="field">
+			<p>Email</p>
+			<input class="contact_email" type="email" placeholder="eg-test@yuktix.com">
+		</div>
+		<div class="field">
+			<p>Contact Number</p>
+			<input class="contact_number" type="text" placeholder="Contact Number">
+		</div>
+		<div class="field">
+			<p>Address</p>
+			<textarea class="contact_address" type="text" placeholder="Address"></textarea>
+		</div>
+		<div class="field">
+			<p>Group</p>
+			<div class="dropdown menucontent" data-group="my_contacts">
+				<p class="groupName" data-group="my_contacts">My Contacts</p>
+				<ul class="menu-dropdown contactGroupDropdown">
+					<li data-group="my_contacts">My Contacts</li>
+					<li data-group="yuktics">Yuktics</li>
+					<li data-group="friends">Friends</li>
+					<li data-group="family">Family</li>
+				</ul>
+			</div>
+		</div>
+		<div class="field btn-group">
+			<a href="#" class="btn cancel">Cancel</a>
+			<a href="#" class="btn selected contactsSubmit">Add</a>
+		</div>
+	</form>
+</div>
+<footer>
+	<div class="wrapper">
+		<div class="footer-content">
+			<div class="footer-menu">
+				<div class="footer-menu-details">
+					<a href="home.html">About Us</a>
+					<a href="">Blog</a>
+					<a href="">Contact</a>
+					<a href="">Home</a>
+				</div>
+				<div class="footer-menu-details">
+				</div>
+				<div class="footer-menu-details">
+				</div>
+				<div class="social-icons footer-menu-details">
+					<a href="twitter" class="social s-twitter"></a>
+					<a href="facebook" class="social s-facebook"></a>
+					<a href="youtube" class="social s-youtube"></a>
+					<a href="in" class="social s-in"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="new"></div>
+</footer>
+<script type="text/javascript" src="js/libs/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
