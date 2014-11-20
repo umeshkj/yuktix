@@ -84,4 +84,9 @@ $(".editContact").click(function(){
 	$(".contact_address").val($(this).parents("tr").find("td:nth-child(5)").text());
 	$(".groupName").val($(this).parents("tr").find("td:nth-child(6)").text());
 	contactCreateEdit();
+});
+
+$(".graph-values li").click(function(){
+	$(".graph-values li").removeClass("selected");
+	$(this).addClass("selected");
 })
